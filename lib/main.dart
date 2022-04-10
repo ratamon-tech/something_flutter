@@ -77,12 +77,13 @@ class FirstPage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                return SecondPage();
+                // return SecondPage();
+                return ThirdPage();
               },
               fullscreenDialog: true),
             );
           },
-          child: Text('Next Page')
+          child: Text('Next Page'),
         )
       ),
     );
@@ -99,6 +100,19 @@ class SecondPage extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Text('Go Back'),
+        ),
+      ),
+    );
+  }
+}
+
+class ThirdPage extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Third Page')),
+      body: Center(
+        child: Image(
+          image: AssetImage('images/genbaneko.jpeg'),
         ),
       ),
     );
