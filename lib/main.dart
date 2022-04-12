@@ -78,7 +78,8 @@ class FirstPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) {
                 // return SecondPage();
-                return ThirdPage();
+                // return ThirdPage();
+                return ForthPage();
               },
               fullscreenDialog: true),
             );
@@ -117,4 +118,34 @@ class ThirdPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class ForthPage extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Forth Page')),
+      body: Container(
+        alignment: Alignment.center,
+        width: 100,
+        color: Colors.green,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            myContainer(),
+            myContainer(),
+            myContainer(),
+          ],
+        ),
+      )
+    );
+  }
+}
+
+Container myContainer({double size = 50}) {
+  return Container(
+    margin: const EdgeInsets.all(8),
+    width: size,
+    height: size,
+    color: Colors.black,
+  );
 }
